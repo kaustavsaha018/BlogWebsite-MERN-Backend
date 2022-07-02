@@ -300,7 +300,7 @@ const generateVerificationTokenCtrl = expressAsyncHandler(async (req, res) => {
     await user.save();
     console.log(verificationToken);
     //build your message
-    const resetURL = `If you were requested to verify your account, verify now within 10 minutes, otherwise ignore this message <a href="http://localhost:3000/verify-account/${verificationToken}">Click to verify your account</a>`;
+    const resetURL = `If you were requested to verify your account, verify now within 10 minutes, otherwise ignore this message <a href="https://blog-website-mern-backend.herokuapp.com/verify-account/${verificationToken}">Click to verify your account</a>`;
 
     const msg = {
       to: user?.email,
@@ -353,7 +353,7 @@ const forgetPasswordToken = expressAsyncHandler(async (req, res) => {
     await user.save();
 
     //build your message
-    const resetURL = `If you were requested to reset your password, reset now within 10 minutes, otherwise ignore this message <a href="http://localhost:3000/reset-password/${token}">Click to Reset</a>`;
+    const resetURL = `If you were requested to reset your password, reset now within 10 minutes, otherwise ignore this message <a href="https://blog-website-mern-backend.herokuapp.com/reset-password/${token}">Click to Reset</a>`;
     const msg = {
       to: email,
       from: "chatterjeesoumyadip53@gmail.com",
