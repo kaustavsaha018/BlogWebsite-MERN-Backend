@@ -300,7 +300,7 @@ const generateVerificationTokenCtrl = expressAsyncHandler(async (req, res) => {
     await user.save();
     console.log(verificationToken);
     //build your message
-    const resetURL = `If you were requested to verify your account, verify now within 10 minutes, otherwise ignore this message <a href="https://blog-website-mern-backend.herokuapp.com/verify-account/${verificationToken}">Click to verify your account</a>`;
+    const resetURL = `If you were requested to verify your account, verify now within 10 minutes, otherwise ignore this message <a href="https://blog-website-mern-frontend-3o9w25t5y-srijanv9.vercel.app/verify-account/${verificationToken}">Click to verify your account</a>`;
 
     const msg = {
       to: user?.email,
